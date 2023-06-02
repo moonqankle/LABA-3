@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Уменьшенные изображения</title>
+    <style>
+      .image-container {
+        display: inline-block;
+        margin: 10px;
+      }
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    {% for resized_image in resized_images %}
+      <div class="image-container">
+        <h3>Уменьшенное изображение {{ loop.index }}</h3>
+        <img src="{{ resized_image }}" alt="Уменьшенное изображение {{ loop.index }}">
+      </div>
+    {% endfor %}
+  </body>
+</html>

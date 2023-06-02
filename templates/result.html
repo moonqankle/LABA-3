@@ -1,0 +1,66 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Результаты</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>Результаты</h1>-->
+
+<!--    <h2>Смешанное изображение (alpha = {{ alpha }})</h2>-->
+<!--    <img src="{{ url_for('static', filename='result.jpg') }}" alt="Смешанное изображение">-->
+
+<!--    <h2>Графики распределения цветов</h2>-->
+<!--    <h3>Изображение 1</h3>-->
+<!--    <img src="{{ url_for('static', filename='image1.jpg') }}" alt="График распределения цветов изображения 1">-->
+<!--    <h3>Изображение 2</h3>-->
+<!--    <img src="{{ url_for('static', filename='image2.jpg') }}" alt="График распределения цветов изображения 2">-->
+<!--    <h3>Смешанное изображение</h3>-->
+<!--    <img src="{{ url_for('static', filename='result.jpg') }}" alt="График распределения цветов смешанного изображения">-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Результат</title>
+    <style>
+      .image-container {
+        display: inline-block;
+        margin: 10px;
+      }
+      .image-container img {
+        max-width: 50%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Результат смешивания изображений</h2>
+    <div class="image-container">
+      <h3>Исходное изображение 1</h3>
+      <img src="{{ url_for('static', filename='image1.jpg') }}" alt="Исходное изображение 1">
+    </div>
+    <div class="image-container">
+      <h3>Исходное изображение 2</h3>
+      <img src="{{ url_for('static', filename='image2.jpg') }}" alt="Исходное изображение 2">
+    </div>
+    <div class="image-container">
+      <h3>Смешанное изображение</h3>
+      <img src="{{ url_for('static', filename='result.jpg') }}" alt="Смешанное изображение">
+    </div>
+    <h2>Уменьшенные изображения</h2>
+    <div class="image-container">
+      <h3>Уменьшенное изображение 1</h3>
+      <img src="{{ url_for('static', filename='image1.jpg') }}" alt="Уменьшенное изображение 1">
+    </div>
+    <div class="image-container">
+      <h3>Уменьшенное изображение 2</h3>
+      <img src="{{ url_for('static', filename='image2.jpg') }}" alt="Уменьшенное изображение 2">
+    </div>
+    <div class="image-container">
+      <h3>Уменьшенное смешанное изображение</h3>
+      <img src="{{ url_for('static', filename='result.jpg') }}" alt="Уменьшенное смешанное изображение">
+    </div>
+  </body>
+</html>
